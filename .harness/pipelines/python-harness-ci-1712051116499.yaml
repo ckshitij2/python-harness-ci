@@ -1,0 +1,33 @@
+pipeline:
+  name: Build python-harness-ci
+  identifier: Build_ckshitij2_python_harness_ci_1712051172401
+  projectIdentifier: RND
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1712050978006
+        repoName: ckshitij2/python-harness-ci
+        build: <+input>
