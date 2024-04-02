@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_ckshitij2_python_harness_ci_1712051172401-pr-trigger-input-set
+  identifier: Build_ckshitij2_python_harness_ci_1712051172401prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: RND
+  pipeline:
+    identifier: Build_ckshitij2_python_harness_ci_1712051172401
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
